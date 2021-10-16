@@ -1,5 +1,5 @@
 <?php include_once __DIR__ . '/header.php' ?>
-<form enctype="multipart/form-data" method="POST" action="filemanager/upload">
+<form enctype="multipart/form-data" method="POST" action="/filemanager/upload">
     <div class="mb-3">
         <input type="file" name="image[]" class="form-control" multiple>
     </div>
