@@ -19,6 +19,8 @@ class FilemanagerController
 
     public function delete()
     {
-
+         $path = __DIR__ . '/../../storage/filemanager';
+         unlink($path . $_POST['file']);
+         redirect('/filemanager');
     }
 }

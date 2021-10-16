@@ -1,26 +1,28 @@
 <?php include_once __DIR__ . '/header.php' ?>
-<form enctype="multipart/form-data" method="POST" action="filemanager/upload">
+<form enctype="multipart/form-data" method="POST" action="/filemanager/upload">
     <div class="mb-3">
         <input type="file" name="image[]" class="form-control" multiple>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<?php if ($files) { ?>
-<div class="row">
-    <?php foreach ($files as $file) { ?>
-        <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= fileUrl($file, 'filemanager') ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    <?php } ?>
+<div class="container">
+    <table class="table">
+   
+    <?  if(count($files) <= 0) { ?>
+    <h4>No files</h4>
+    <?php } else {   
+        foreach($files as $file) { ?>
+    <tr>
+        <form action="/filemanager/delete" method="POST" >
+            <td><img src="/storage/filemanager/<?= $file  ?>" style="height: 50px;"></td>
+            <td><label><?= $file ?></label></td>
+            <td><button name="file" value="<?= $file ?>">Delete</button></td>
+        </form>
+        
+    </tr>
+    <?php }
+    } ?>
+    </table>
 </div>
-<?php } ?>
 <?php include_once __DIR__ . '/footer.php' ?>
