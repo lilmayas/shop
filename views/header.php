@@ -28,6 +28,7 @@
                         <a class="nav-link" href="/views/products_table.php">Product table</a>
                         <a class="nav-link" href="/views/products_form.php">Product Form</a>
                         <a class="nav-link" href="/debug.php">Debug</a>
+                        <a class="nav-link" href="/views/filemanager.php">Filemanager</a>
                     </div>
                 </div>
             </div>

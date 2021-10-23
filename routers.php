@@ -1,4 +1,6 @@
 <?php
+use App\Core\RouterList;
+
 RouterList::addRouter([
     'url_path' => '/',
     'handler' => 'HomeController@index',
@@ -51,4 +53,15 @@ RouterList::addRouter([
     'url_path' => '/filemanager/delete',
     'handler' => 'FilemanagerController@delete',
     'method' => 'POST'
+]);
+
+RouterList::addRouter([
+    'url_path' => '/debug',
+    'handler' => 'DebugController@index',
+    'method' => 'GET'
+]);
+RouterList::addRouter([
+    'url_path' => '/error',
+    'handler' => 'ErrorController@index',
+    'method' => 'GET'
 ]);
