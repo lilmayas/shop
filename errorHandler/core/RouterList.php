@@ -1,4 +1,10 @@
 <?php
+
+namespace App\Core;
+
+use App\Controllers\HomeController;
+use App\Controllers\ModalController;
+
 class RouterList
 {
     protected static $routerRules = [];

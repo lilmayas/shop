@@ -43,5 +43,7 @@ include_once __DIR__ . '/routers.php';
 include_once __DIR__ . '/app/Controllers/ProductsController.php';
 include_once __DIR__ . '/app/Controllers/DebugController.php';
 include_once __DIR__ . '/app/Controllers/ErrorController.php';
+include_once __DIR__ . '/app/Controllers/ModalController.php';
 include_once __DIR__ . '/app/Models/Model.php';
 include_once __DIR__ . '/app/Models/ProductModel.php';
+include_once __DIR__ . '/core/modal_builder.php';

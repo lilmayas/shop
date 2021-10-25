@@ -3,13 +3,13 @@
 namespace App\Controllers;
 
 use App\Models\ProductModel;
-use Exception;
+//use Exception;
 
 class ProductsController
 {
     public function index()
     {
-        throw new Exception('test error');
+
         return renderView('products_table');
     }
 

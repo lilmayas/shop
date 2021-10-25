@@ -65,3 +65,9 @@ RouterList::addRouter([
     'handler' => 'ErrorController@index',
     'method' => 'GET'
 ]);
+
+// RouterList::addRouter([
+//     'url_path' => '/modal',
+//     'handler' => 'ModalController@index',
+//     'method' => 'GET'
+// ]);

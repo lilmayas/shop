@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Controllers;
+
 class FilemanagerController
 {
     public function index()
