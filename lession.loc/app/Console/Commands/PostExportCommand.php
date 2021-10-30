@@ -19,7 +19,7 @@ class PostExportCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'post:export';
 
     /**
      * Create a new command instance.
@@ -38,8 +38,14 @@ class PostExportCommand extends Command
      */
     public function handle()
     {
-        $filePath = __DIR__ . '/../storage2/posts.txt';
-        $content = Post::all();
+        $filePath = storage_path('posts.txt');
+        
+        $content = '';
+        foreach(Post::all() as $post) {
+            $content .= $post->title . ': ' .
+             $post->tags()->get()->implode('name', ', ') . "\t ";
+        }
+
         file_put_contents($filePath, $content);
         return Command::SUCCESS;
     }
