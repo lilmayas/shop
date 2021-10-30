@@ -13,13 +13,13 @@ class AddForeignPostTag extends Migration
      */
     public function up()
     {
-        Schema::table('post_tag', function (Blueprint $table) {
-            $table->foreign('tag_id')
-                ->on('tags')
-                ->references('id')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-        });
+        // Schema::table('post_tag', function (Blueprint $table) {
+        //     $table->foreign('tag_id')
+        //         ->on('tags')
+        //         ->references('id')
+        //         ->onUpdate('cascade')
+        //         ->onDelete('cascade');
+        // });
     }
 
     /**
@@ -29,8 +29,8 @@ class AddForeignPostTag extends Migration
      */
     public function down()
     {
-        Schema::table('post_tag', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('post_tag', function (Blueprint $table) {
+        //     //
+        // });
     }
 }

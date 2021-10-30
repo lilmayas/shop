@@ -27,6 +27,11 @@ class CreateAuthorsTable extends Migration
                 ->on('authors')
                 ->onUpdate('cascade')
                 ->onDelete('set null');
+            $table->foreign('commment_id')
+                ->references('id')
+                ->on('comments')
+                ->onUpdate('cascade')
+                ->onDelete('set null');
         });
     }
 
