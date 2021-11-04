@@ -40,14 +40,6 @@ class TestCommand2 extends Command
     public function handle()
     {
         
-        // Post::insert([
-        //     ['title' => 'test title 2'],
-        //     ['content' => 'test content 2'],
-        // ]);
-        // Tag::insert([
-        //     ['name' => 'test name 1'],
-        //     ['name' => 'test name 2'],
-        // ]);
         return Command::SUCCESS;
     }
 }

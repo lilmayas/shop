@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admins\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admins\CategoryController;
+use App\Http\Controllers\LocaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/admins/posts/create', [PostController::class, 'create'])->name('adm
 Route::post('/admins/posts', [PostController::class, 'store'])->name('admin.posts.store');
 
 //Route::resource('/admins/categories', [CategoryController::class]);
+Route::resource('admins/categories', \App\Http\Controllers\Admins\CategoryController::class);
+Route::get('/locale/{code}', [\App\Http\Controllers\LocaleController::class,'setLocale'])->name('locale');

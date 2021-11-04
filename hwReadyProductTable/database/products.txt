@@ -1,0 +1,1 @@
+[{"name":"test product","articul":"test article","image":"1636042791.jpg"}]

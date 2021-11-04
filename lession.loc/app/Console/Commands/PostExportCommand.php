@@ -19,7 +19,7 @@ class PostExportCommand extends Command
      *
      * @var string
      */
-    protected $description = 'post:export';
+    protected $description = 'Command description';
 
     /**
      * Create a new command instance.
