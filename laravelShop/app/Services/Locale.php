@@ -46,10 +46,12 @@ class Locale
 
        $code = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
         if (self::availableLocales()->where('code', $code)->isEmpty()) {
-            if(empty(config('locale.default'))) {
-                throw new \Exception('Locale config is not found.');
-            }
-            return config('locale.default');
+
+            return self::EN;
+            // if(empty(config('locale.default'))) {
+            //     throw new \Exception('Locale config is not found.');
+            // }
+            // return config('locale.default');
         }
         return $code;
     }

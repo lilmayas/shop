@@ -1,1 +1,0 @@
-[{"name":"product1","articul":"1231df","description":"some desc"},{"name":"test","articul":"$_POST['name']","description":"$_POST['name']"},{"name":"sdfsdf","articul":"JR 3-016","description":"sdfsdfw2rrwer"}]
